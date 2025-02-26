@@ -1,0 +1,46 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+import java.util.Scanner;
+
+class Dishes {
+    private String type;
+    private String ingredients;
+    private String cuisine;
+
+    
+    public Dishes(String type, String ingredients, String cuisine) {
+        this.type = type;
+        this.ingredients = ingredients;
+        this.cuisine = cuisine;
+    }
+
+    public void displayDish() {
+        System.out.println("\nWelcome to the Asian Restaurant");
+        System.out.println("Your selected choice of dish is: " + type);
+        System.out.println("Your dish contains the following ingredients: " + ingredients);
+        System.out.println("Your dish belongs to the " + cuisine + " cuisine.");
+    }
+}
+
+public class DishMain {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the type of dish (sweet, savory, etc.): ");
+        String type = scanner.nextLine();
+
+        System.out.print("Enter the ingredients (comma-separated): ");
+        String ingredients = scanner.nextLine();
+
+        System.out.print("Enter the cuisine type: ");
+        String cuisine = scanner.nextLine();
+
+  
+        Dishes dish = new Dishes(type, ingredients, cuisine);
+        dish.displayDish();
+
+        scanner.close();
+    }
+}
