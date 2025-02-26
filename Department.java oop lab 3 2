@@ -1,0 +1,50 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.mycompany.departments;
+
+/**
+ *
+ * @author HP
+ */
+import java.util.Scanner;
+
+public class Department {
+    public String deptName;
+    public String deptHead;
+
+    // Constructor to initialize values
+    public Department(String deptName, String deptHead) {
+        this.deptName = deptName;
+        this.deptHead = deptHead;
+    }
+
+    // Method to display department details
+    public void display() {
+        System.out.println("\nDepartment Details:");
+        System.out.println("Department Name: " + deptName);
+        System.out.println("Department Head: " + deptHead);
+    }
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+
+        System.out.print("Enter name of department: ");
+        String deptName = scan.nextLine();
+
+        System.out.print("Enter name of department head: ");
+        String deptHead = scan.nextLine();
+
+        // Creating an object of Department and passing values
+        Department dept = new Department(deptName, deptHead);
+
+        // Calling display method to show details
+        dept.display();
+
+        // Closing the Scanner
+        scan.close();
+    }
+}
+
+
